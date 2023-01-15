@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script> -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junji Ito Style Transfer</title>
+    
+    <link rel="stylesheet" href="/static/output.css" />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div id="canvas-container" class="fixed w-full h-screen flex place-content-center items-center text-center text-sm">
+        <!-- <h1>Junji Ito</h1>
+        <h4>Style Transfer</h4> -->
+        <form  action="" method="POST" enctype="multipart/form-data">
+            <div class="flex">        
+                {% if resource and result %} 
+                <img id="resource" src={{ url_for('static',filename=resource)}} style="width:500px;height:500px; display: block; margin-right: 1rem;"/>
+                <img id="result" src={{ url_for('static',filename=result)}} style="width:500px;height:500px;display: block;"/>
+                {% else %}
+                <img id="imageHolder"  style="width:500px;height:500px; display: none;"/>
+                <video id="video" width="500px" style="width:500px;height:500px; display: none;">
+                <canvas id="canvas" width="500px" height="500px"></canvas>
+                {% endif %}
+            </div>
+            <div style="padding-top: 1rem;" class="flex">
+                <!-- for upload image -->
+                <input type="file" accept="image/*" name="file" id="file" onchange="loadFile(event)"
+                style="display: none"
+                />
+                <label for="file" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 mr-2 rounded shadow flex-1">Upload Image</label>
+                <!-- for camera -->
+                <input name="camera" id="camera"  class="camera" onclick="loadFile(event)" style="display: none" >
+                <label for="camera" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 mr-2 rounded shadow flex-1">Camera</label>
+                <!-- submit -->
+                <input id="submit"
+                class="text-gray-800 font-semibold py-3 rounded shadow flex-2"
+                type="submit"
+                value="submit"
+                />
+            </div>
+        </form>
+    </div>
+    
+    <script>
+      var loadFile = function(event) {
+        var image = document.getElementById("imageHolder");
+        video = document.getElementById('video'); 
+        inputCamera = document.getElementById("camera");
+
+        // start camera or take picture
+        if (event.target.classList.contains("camera")){
+          // start camera
+          if (video.style.display == "none"){
+            let constraints = {
+              video: { width: 500, height: 500 },
+              audio: false
+            };
+            let promise = navigator.mediaDevices.getUserMedia(constraints);
+            promise.then((mediaStream) => {
+              mediaStreamTrack=mediaStream.getVideoTracks()
+                video.srcObject = mediaStream;
+                video.play();
+            });
+            image.style.display = "none";
+            video.style.display = "block";
+          // take picture
+          }else{
+            let canvas = document.getElementById('canvas');
+            let ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, 500, 500);
+            inputCamera.value = canvas.toDataURL('image/jpeg');
+
+            canvas.toBlob((blob) => {
+               const url = URL.createObjectURL(blob);
+              //  inputCamera.value = url;
+               image.src= url;
+            });
+            video.style.display = "none";
+            image.style.display = "block";
+            closeCamera()
+          }
+        } 
+
+        // upload image
+        else{   
+          image.src = URL.createObjectURL(event.target.files[0]);
+          video.style.display = "none";
+          image.style.display = "block";
+        }
+      };
+      
+      function closeCamera() {
+          let stream = document.getElementById('video').srcObject;
+          let tracks = stream.getTracks();
+
+          tracks.forEach(function(track) {
+            track.stop();
+          });
+
+         document.getElementById('video').srcObject = null;
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+    <script src={{url_for('static',filename='sketch.js')}}></script>
+  </body>
+</html>

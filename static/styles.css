@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Lacquer";
+  src: url("./fonts/Lacquer-Regular.ttf") format("truetype");
+}
+
+body {
+  background-color: black;
+  font-family: Lacquer, cursive;
+}
+
+input,
+label {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+#canvas-containder {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  mix-blend-mode: multiply;
+  font-family: Lacquer, cursive;
+}
+
+#submit {
+  background-color: #8d99ae;
+}
+
+#submit:hover {
+  background-color: #461220;
+  color: aliceblue;
+}
