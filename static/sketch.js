@@ -4,7 +4,7 @@ let p = Array(nb);
 function setup() {
   canvas_w = windowWidth;
   canvas_h = windowHeight;
-  title_1 = "Junji Ito";
+  title_1 = "Horror Manga";
   title_2 = "Style Transfer";
   canvas = createCanvas(canvas_w, canvas_h);
   canvas.position(0, 0);
