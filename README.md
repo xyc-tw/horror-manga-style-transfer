@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO, NAME and HOMEPAGE -->
 <br />
-<div align="center">
+<div align="left">
   <a href=”">  <!--  website on Render -->
     <img src="images/logo.png" alt="Logo" width="80" height="80"> <!--  Logo –>
   </a>
@@ -52,9 +52,8 @@ You can upload a picture from your computer or use the webcam for the target ima
 ## Usage examples
 
 Here are some examples conducted from this application.
-[![example-1][example-1]] [![example-1-transfered][example-1-transfered]]
-[![example-2][example-1]] [![example-2-transfered][example-1-transfered]]
-[![example-3][example-1]] [![example-3-transfered][example-1-transfered]]
+[![example-1, import image][example-1]] 
+[![example-2, use webcam][example-2]] 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,9 +61,9 @@ Here are some examples conducted from this application.
 <!-- CONTACT -->
 ## Contact
 
-Hsinyu Chen - [![@linkedIn][linkedin-url]]() - chenxinyu.tw@gmail.com
+Hsinyu Chen - [@linkedIn](https://www.linkedin.com/in/hsinyu-chen-4b43b489/) - [@email](chenxinyu.tw@gmail.com)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)<!--  repo link and name -->
+Project Link: [@github](https://github.com/xyc-tw/horror-manga-style-transfer)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,14 +85,9 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-url]: https://www.linkedin.com/in/hsinyu-chen-4b43b489/
-[homepage]: images/homepage.png
-[example-1]: images/example-1.jpg
-[example-1-transfered]: images/example-1-tranfered.jpeg
-[example-2]: images/example-2.jpg
-[example-2-transfered]: images/example-2-tranfered.jpeg
-[example-3]: images/example-3.jpeg
-[example-3-transfered]: images/example-3-tranfered.jpeg
-
+[homepage]: images/homepage.jpeg
+[example-1]: images/example-1.jpeg
+[example-2]: images/example-2.jpeg
 
 
 
