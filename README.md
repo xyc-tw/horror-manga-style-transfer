@@ -1,13 +1,11 @@
 <!-- PROJECT LOGO, NAME and HOMEPAGE -->
 <br />
-<div align="left">
-  <a href=”https://horror-manga-style-transfer.onrender.com/">  <!--  website on Render -->
+<div align="center">
     <img src="images/logo.png" alt="Logo" style="text-align: center;"> 
-  </a>
 </div>
 
 <!-- TABLE OF CONTENTS -->
-<details>
+<details aligh="left>
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
