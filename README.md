@@ -23,7 +23,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Homepage][homepage]](https://example.com) <!--  website on Render -->
+[![Homepage][homepage]](https://horror-manga-style-transfer.onrender.com/) <!--  website on Render -->
 The project is based on papers ***"Image Style Transfer Using Convolutional Neural Networks"*** by Leon A. Gatys, Alexander S. Ecker, Matthias Bethge and ***"Perceptual Losses for Real-Time Style Transfer and Super-Resolution"*** by Justin Johnson, Alexandre Alahi, Li Fei-Fei in 2016 and take the reference from [this kaggle notebook] (https://www.kaggle.com/code/tarunbisht11/generate-art-using-fast-style-transfer-in-a-second).
 
 The architecture contains 2 ANN models, one CNN model for style transfer and one pretrained VGG19 model for loss function.
@@ -52,8 +52,8 @@ You can upload a picture from your computer or use the webcam for the target ima
 ## Usage examples
 
 Here are some examples conducted from this application.
-[![example-1, import image][example-1]] 
-[![example-2, use webcam][example-2]] 
+![example-1, import image][example-1]
+![example-2, use webcam][example-2] 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,6 +85,7 @@ Project Link: [@github](https://github.com/xyc-tw/horror-manga-style-transfer)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-url]: https://www.linkedin.com/in/hsinyu-chen-4b43b489/
+[logo]: images/logo.png
 [homepage]: images/homepage.jpeg
 [example-1]: images/example-1.jpeg
 [example-2]: images/example-2.jpeg
