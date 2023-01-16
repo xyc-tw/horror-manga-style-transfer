@@ -1,8 +1,8 @@
 <!-- PROJECT LOGO, NAME and HOMEPAGE -->
 <br />
 <div align="left">
-  <a href=”">  <!--  website on Render -->
-    <img src="images/logo.png" alt="Logo" width="80" height="80"> <!--  Logo –>
+  <a href=”https://horror-manga-style-transfer.onrender.com/">  <!--  website on Render -->
+    <img src="images/logo.png" alt="Logo" style="text-align: center;"> 
   </a>
 </div>
 
