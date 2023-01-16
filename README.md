@@ -22,9 +22,9 @@
 ## About The Project
 
 [![Homepage][homepage]](https://horror-manga-style-transfer.onrender.com/) <!--  website on Render -->
-The project is based on papers ***"Image Style Transfer Using Convolutional Neural Networks"*** by Leon A. Gatys, Alexander S. Ecker, Matthias Bethge and ***"Perceptual Losses for Real-Time Style Transfer and Super-Resolution"*** by Justin Johnson, Alexandre Alahi, Li Fei-Fei in 2016 and take the reference from [this kaggle notebook] (https://www.kaggle.com/code/tarunbisht11/generate-art-using-fast-style-transfer-in-a-second).
+The project is based on papers ***"Image Style Transfer Using Convolutional Neural Networks"*** by Leon A. Gatys, Alexander S. Ecker, Matthias Bethge and ***"Perceptual Losses for Real-Time Style Transfer and Super-Resolution"*** by Justin Johnson, Alexandre Alahi, Li Fei-Fei in 2016 and take the reference from [this kaggle notebook](https://www.kaggle.com/code/tarunbisht11/generate-art-using-fast-style-transfer-in-a-second).
 
-The architecture contains 2 ANN models, one CNN model for style transfer and one pretrained VGG19 model for loss function.
+The architecture contains 2 ANN models, one CNN model for style transfer and one pretrained VGG19 model for calculating loss function.
 
 The final application is deployed in Render using Flask and p5.js.
 
@@ -42,7 +42,10 @@ The Transfer model was trained in Colab.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-You can upload a picture from your computer or use the webcam for the target image and get the style-transferred image after clicking the transfer button.
+You can upload a picture from your computer or use the webcam for the target image and get the style-transferred image.
+
+Click upload image and choose one image, then click transfer button.
+Or click camera to start webcam and then click camera again to take a picture, then click transfer button.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
